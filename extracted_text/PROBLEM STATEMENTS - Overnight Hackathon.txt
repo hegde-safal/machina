@@ -1,0 +1,179 @@
+AI/ML Domain
+1. Vernacular Content Moderation for Regional Social Media
+Problem Context: With India's internet population growing rapidly in Tier 2/3 cities, regional
+language content on platforms like ShareChat, Moj, and community WhatsApp groups has
+exploded. However, existing content moderation tools are optimized for English and fail to
+detect hate speech, misinformation, and harmful content in Indian languages that use complex
+scripts (Devanagari, Tamil, Telugu, etc.), code-mixing (Hinglish), and cultural context.
+The Challenge: Hate speech in regional languages often relies on cultural references, historical
+events, caste-based slurs, and religious innuendos that don't translate directly. A phrase that
+seems innocent in literal translation might carry deeply offensive meaning in local context.
+Additionally, users bypass filters using phonetic spelling, script mixing, and regional memes.
+Why It Matters: 90% of new internet users in India prefer regional languages. Without effective
+moderation, these platforms become breeding grounds for communal tension, with real-world
+consequences including mob violence and social unrest. Current global AI models lack the
+cultural-linguistic training data to address this effectively.
+2. Intelligent Document Processing for Infrastructure Operations
+Problem Context: Organizations operating complex infrastructure generate massive volumes
+of diverse documents across engineering, operations, procurement, HR, safety, and
+compliance. These files arrive in fragmented formats and channels, creating delays, siloed
+visibility, compliance risk, duplicated work, and loss of institutional knowledge.
+The Challenge: What's needed is a system that can automatically condense, contextualize, and
+distribute critical information to the right stakeholders with full traceability to original sources,
+enabling faster and more reliable decision-making across the organization.
+Why It Matters: Without automated processing and intelligent routing, critical information gets
+lost in document silos, compliance deadlines are missed, and decision-making is delayed due to
+inability to quickly access and synthesize relevant information from multiple sources.
+3. Agricultural Input Subsidy Leakage Detection
+Problem Context: The Indian government spends over ₹70,000 crores annually on agricultural
+subsidies for fertilizers, seeds, and equipment through a network of dealers and cooperatives.
+However, a significant portion of these subsidies never reaches farmers. Dealers inflate
+beneficiary lists with ghost farmers, divert subsidized goods to the open market at higher prices,
+or create fake invoices for supplies never delivered. The distribution chain involves multiple
+intermediaries across districts, making it difficult to track whether subsidies actually benefit
+intended recipients.
+The Challenge: Subsidy claims show unusual patterns like the same dealer consistently
+serving unusually high numbers of farmers compared to regional averages, beneficiaries
+receiving fertilizer quantities that exceed their reported land holdings, or geographically
+clustered claims that suggest coordinated fraud. However, these patterns are hidden across
+thousands of transactions, multiple crop seasons, and different subsidy schemes. Manual audits
+happen annually and only spot-check a tiny fraction of transactions, missing systematic fraud.
+Why It Matters: Subsidy leakage means farmers pay market prices while taxpayers fund
+phantom beneficiaries, undermining both agricultural productivity and government finances.
+Real farmers in remote areas miss out on crucial support during planting season, while corrupt
+dealers profit. Detecting anomalous distribution patterns could redirect billions toward genuine
+agricultural development and improve rural livelihoods.
+Cybersecurity Domain
+4. UPI Transaction Fraud Pattern Detection
+Problem Context: India processes over 10 billion UPI transactions monthly, but the instant,
+irrevocable nature of UPI has spawned sophisticated fraud patterns. Scammers use social
+engineering combined with small verification transactions, fake payment confirmation
+screenshots, QR code swapping at merchant locations, and refund scams where victims are
+tricked into entering their UPI PIN on fake refund pages.
+The Challenge: Unlike credit card fraud with chargeback windows, UPI fraud is instant and
+irreversible. Fraudsters exploit the trust-based ecosystem by impersonating delivery personnel,
+customer service agents, or even relatives in distress. Traditional rule-based systems generate
+too many false positives (blocking legitimate family transfers) or miss novel attack patterns that
+evolve weekly.
+Why It Matters: UPI fraud cost Indians over ₹1,000 crores in 2024, with victims often being
+first-time digital payment users from rural areas who lack digital literacy. Banks face reputational
+damage but have limited tools to prevent rather than just report fraud.
+5. HTTP Traffic Attack Pattern Analysis
+Problem Context: Modern organizations face increasing cyber threats exploiting vulnerabilities
+in the HTTP protocol, especially through maliciously crafted URLs. Attackers use techniques like
+SQL injection, XSS, command injection, directory traversal, SSRF, and credential-stuffing to
+compromise systems, steal data, or gain unauthorized access. Security teams struggle to
+manually inspect massive traffic logs or IPDR data to detect and distinguish attempted attacks
+from successful breaches.
+The Challenge: There is a need for a system that can automatically analyze HTTP traffic,
+identify and classify URL-based attack patterns, separate attempts from successful intrusions,
+and provide actionable visibility through search, filtering, reporting, and PCAP ingestion to
+support rapid incident response.
+Why It Matters: Without automated analysis, security teams are overwhelmed by log volume,
+miss sophisticated attack patterns, and cannot effectively distinguish between failed attempts
+and successful compromises, leaving organizations vulnerable to undetected breaches.
+Blockchain Domain
+6. Cooperative Society Digital Ledger Transparency
+Problem Context: India has 8.5 lakh cooperative societies managing assets worth ₹10 lakh
+crores, serving rural communities with credit, agricultural supplies, and housing. However, these
+societies frequently face embezzlement, opaque accounting, and manipulation by powerful local
+figures. Members (often small farmers or low-income families) cannot verify how their deposits
+are used or whether loans are distributed fairly.
+The Challenge: Traditional paper-based or poorly digitized record-keeping allows society
+officials to manipulate accounts, give preferential loans to relatives, or siphon funds. Audits
+happen once a year and are often perfunctory. Members lack real-time visibility into
+transactions, pending loan applications, or dividend calculations. Trust erosion leads to
+members withdrawing, collapsing vital rural financial infrastructure.
+Why It Matters: Cooperative societies are financial lifelines for 290 million Indians, especially in
+areas without bank branches. Corruption and mismanagement directly impact farmers' access
+to credit during planting season and families' savings security. A transparent, tamper-proof
+system could restore trust and improve rural financial inclusion.
+7. Digital Content Copyright Authentication
+Problem Context: Copyright infringement is a growing problem amongst online creators.
+Blockchain can help fix that by providing authentication for internet content. Numbers protocol,
+for example, is a blockchain camera app that provides a unique and recorded verification
+number for every piece of media captured with it.
+The Challenge: Viewers can scan for the verification number when the creator or anyone else
+shares the media, ensuring there's no copyright infringement.
+Why It Matters: Online creators struggle to prove ownership and authenticity of their content,
+leading to widespread unauthorized use and loss of revenue. A blockchain-based verification
+system can provide immutable proof of original creation.
+Mobile App Development Domain
+8. Multilingual AI Loan Advisor Application
+Problem Context: People struggle with loan applications due to confusing eligibility
+requirements, unclear documentation processes, language barriers, and low financial literacy,
+which leads to rejected applications and wasted time. Most existing solutions rely on static forms
+and English-only interfaces, offering little personalized guidance.
+The Challenge: To address this, the goal is to build an Android application featuring a
+multilingual conversational AI Loan Advisor that interacts via voice or text, understands users'
+financial context, determines their intent dynamically, provides real-time loan eligibility checks,
+guides them step-by-step through the loan application process, and delivers practical financial
+education.
+Why It Matters: Making the loan journey simpler, accessible, and stress-free for everyone,
+especially users from non-English speaking backgrounds with limited financial literacy who are
+currently excluded from formal lending systems.
+Education Tech Domain
+9. Vernacular STEM Learning Gap Analysis
+Problem Context: India's National Education Policy 2020 mandates mother-tongue education
+until Grade 5, but quality STEM (Science, Technology, Engineering, Math) content in regional
+languages is scarce. YouTube, Khan Academy, and coaching platforms are overwhelmingly
+English-centric. Students in Tamil Nadu, West Bengal, or UP learn science in their regional
+language but lack quality supplementary resources, interactive simulations, or doubt-clearing
+platforms in those languages.
+The Challenge: Simply translating English content doesn't work. Scientific terminology,
+pedagogical approaches, and examples need cultural localization. A physics problem about
+baseball means nothing to a student in rural Odisha. Additionally, teachers struggle to assess
+which specific STEM concepts students are failing to grasp, leading to rote memorization rather
+than conceptual understanding. There's no data-driven way to identify that students in
+Hindi-medium schools struggle specifically with electrochemistry analogies versus students
+misunderstanding the concept itself.
+Why It Matters: India's engineering and medical entrance exams are offered in 13 languages,
+but preparation resources are English-dominated, creating unfair disadvantages. This
+perpetuates educational inequality. Bright students from vernacular backgrounds drop out of
+STEM paths due to language barriers, not aptitude. Bridging this gap could unlock India's full
+scientific talent pool.
+10. Behavioral Analytics for Online Assessment Integrity
+Problem Context: The core problem is maintaining academic integrity in online assessments
+without intrusive video-based proctoring, by designing a scalable, privacy-compliant system that
+analyses non-invasive behavioural signals such as mouse movement patterns, keystroke
+dynamics, and window-switching activity to generate a real-time risk score that adapts
+dynamically to user behaviour and triggers appropriate automated interventions when
+suspicious patterns emerge.
+The Challenge: The challenge is to detect cheating effectively while minimizing false positives,
+ensuring a seamless candidate experience, enabling flexible integration of monitoring tools
+without rigid rule-based logic, and supporting large-scale deployment that respects data
+protection regulations like GDPR and FERPA.
+Why It Matters: Current video-based proctoring is invasive, creates privacy concerns, and
+causes anxiety for honest students. A behavioral analytics approach can maintain integrity while
+respecting privacy and providing a better assessment experience.
+General Innovation Domain
+11. Gig Worker Rights Verification System
+Problem Context: India has 15+ million gig workers (delivery riders, cab drivers, freelancers on
+platforms like Swiggy, Uber, Urban Company). These workers face arbitrary account
+deactivations, withheld earnings, unexplained penalties, and lack transparency into rating
+systems or payout calculations. When a Zomato rider's account gets suspended, they often
+don't know why, have no appeal process, and lose their only income source overnight.
+The Challenge: Platform algorithms make opaque decisions about worker performance,
+earnings, and access. Workers can't verify if they're being fairly rated, whether they received all
+entitled bonuses, or why they were deactivated. Platforms claim proprietary algorithms while
+workers have no recourse except customer service chatbots. There's no neutral system to audit
+platform decisions or give workers evidence for labor disputes.
+Why It Matters: Gig workers operate in a legal grey area. They are not employees (no labor law
+protection) but not independent contractors (can't negotiate terms). Without transparency,
+platforms can unfairly exploit workers who have no alternative income. A verification system
+could balance platform needs with worker rights, creating accountability without revealing
+business-critical algorithms.
+12. Intelligent Candidate Discovery and Matching Platform
+Problem Context: Right now hiring is painfully inefficient: HR teams waste hours jumping
+across platforms like LinkedIn, Naukri, and random job boards, manually searching and
+shortlisting candidates based on vague keyword matches that often miss actual skill and role fit.
+The process is slow, biased, and heavily dependent on guesswork rather than data, leading to
+bad hires, lost productivity, and frustrated candidates.
+The Challenge: The real problem is that job descriptions rarely translate into meaningful
+matches because current systems can't understand context, measure real competence, or
+evaluate compatibility beyond surface-level filters. You need a platform that ingests job
+descriptions, interprets them semantically, auto-discovers and ranks suitable candidates across
+sources, and continuously learns from hiring patterns to make accurate recommendations.
+Why It Matters: Turning hiring from a chaotic manual hunt into a fast, intelligent, data-driven
+pipeline that reduces time-to-hire, improves candidate quality, and eliminates bias from the
+recruitment process.
