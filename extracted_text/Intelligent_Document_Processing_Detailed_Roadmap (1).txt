@@ -1,0 +1,68 @@
+Intelligent Document Processing (IDP)
+Detailed Project Roadmap & System Blueprint
+This document describes the full roadmap, architecture, RAG design, database structure, and user
+workflows for the IDP platform to be built in a 12-hour hackathon.
+1. High-Level Goal
+Build a web-based Intelligent Document Processing platform where an Admin can upload organizational
+documents (PDF/DOCX, optionally images), which are automatically processed to extract text, summarize
+content, classify the document type, route to a department, assign priority and due date, maintain status
+(Pending, In-Review, Replied), enable Admin–Employee chat, and support semantic search.
+2. Roadmap & Build Order (12-Hour Hackathon)
+Phase 1 – Core: Auth, upload, OCR/text extraction, summarization, classification, routing, status, chat,
+and semantic search.
+Phase 2 – Enhancements: Priority tagging, due date extraction, AI-suggested replies.
+Phase 3 – Polish & Demo: UI refinement, sample documents per department, full dry-run.
+3. Frontend (Next.js) – Structure & Behaviour
+Pages:
+- /login: username/password fi redirect to admin or employee dashboard based on role.
+- /admin/dashboard: upload widget + recent documents table + search entry point.
+- /admin/document/[id]: summary, extracted text, category, department, priority, due date, status, and chat.
+- /admin/search: semantic search with natural language query.
+- /employee/dashboard: list of documents for employee's department.
+- /employee/document/[id]: view summary, status, due date, and chat.
+- /employee/search: semantic search limited to that department.
+4. Backend (FastAPI) – Services & Endpoints
+Core endpoints:
+- POST /login: validate dummy users and return role/department.
+- POST /upload or /process: handle file upload, OCR/text extraction, summarization, classification, routing,
+priority and due date extraction, FAISS indexing, and document creation.
+- GET /documents: list of documents (all for admin, filtered by department for employees).
+- GET /document/{id}: full document details.
+- POST /search: semantic search via FAISS.
+- POST /chat/send and GET /chat/history/{doc_id}: chat per document.
+- POST /status/update: update status (e.g., In-Review when employee opens a document).
+5. RAG & Semantic Search Design
+Indexing:
+- Chunk extracted text per document.
+- Embed each chunk using an embedding model.
+- Store embeddings in FAISS with metadata (doc_id, department, chunk index).
+Search:
+- Embed the query, retrieve similar vectors via FAISS, map to doc_ids, aggregate and filter by department
+for employees, and return ranked results.
+6. Database Design
+Tables:
+users(id, username, password, role, department)
+documents(id, filename, category, department, priority, due_date, status, summary, upload_time)
+messages(id, doc_id, sender_role, message, timestamp)
+Dummy users: 1 admin and 4–5 employees (Accounts, HR, Procurement, Safety, Engineering).
+7. Detailed User Interaction Flows
+Admin:
+- Logs in fi /admin/dashboard.
+- Uploads a document fi system processes and routes it.
+- Views document details, reads summary, sees department, priority, due date, and status.
+- Uses chat to communicate with department.
+- Uses semantic search to retrieve documents.
+Employee:
+- Logs in fi /employee/dashboard.
+- Sees documents routed to their department.
+- Opens a document fi status becomes In-Review.
+- Reads summary and due date, then replies via chat fi status becomes Replied.
+- Uses semantic search limited to their department.
+8. Suggested Demo Flow for Judges
+1. Explain the problem (manual document handling and routing).
+2. Log in as Admin and upload a real-looking document.
+3. Show automatic summary, classification, routing, priority, and due date.
+4. Switch to an Employee account, show the routed document, status change, and chat reply.
+5. Switch back to Admin, display the reply and updated status.
+6. Demonstrate semantic search with a natural language query.
+7. Conclude with impact and future potential.
