@@ -1,8 +1,13 @@
 import os
 from dotenv import load_dotenv
 from google import genai
-from embedder import embed_text
-from vector_store import VectorStore
+
+try:
+    from IDP_AI_Pipeline.embedder import embed_text
+    from IDP_AI_Pipeline.vector_store import VectorStore
+except ImportError:
+    from embedder import embed_text
+    from vector_store import VectorStore
 
 load_dotenv()
 

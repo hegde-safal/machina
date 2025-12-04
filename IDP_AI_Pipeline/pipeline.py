@@ -1,9 +1,19 @@
-from summarizer import summarize_document
-from classifier import classify_document
-from router import route_document
-from chunker import chunk_text
-from rag_engine import build_index, rag_query
-from extractor import extract_key_information
+try:
+    # When imported as a package
+    from IDP_AI_Pipeline.summarizer import summarize_document
+    from IDP_AI_Pipeline.classifier import classify_document
+    from IDP_AI_Pipeline.router import route_document
+    from IDP_AI_Pipeline.chunker import chunk_text
+    from IDP_AI_Pipeline.rag_engine import build_index, rag_query
+    from IDP_AI_Pipeline.extractor import extract_key_information
+except ImportError:
+    # When run directly from within the package
+    from summarizer import summarize_document
+    from classifier import classify_document
+    from router import route_document
+    from chunker import chunk_text
+    from rag_engine import build_index, rag_query
+    from extractor import extract_key_information
 
 def run_full_pipeline(text: str, rag_query_text: str = "What is the main topic of this document?"):
     """
