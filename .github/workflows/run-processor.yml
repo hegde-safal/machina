@@ -1,0 +1,15 @@
+name: Process Storage Events
+
+on:
+  schedule:
+    - cron: "* * * * *"   # run every minute
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Supabase Function
+        run: |
+          curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+          https://YOUR_PROJECT_ID.functions.supabase.co/process-storage-events
