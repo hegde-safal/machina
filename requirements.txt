@@ -10,3 +10,5 @@ numpy
 google-genai
 python-dotenv
 faiss-cpu
+fastapi
+uvicorn
