@@ -12,4 +12,4 @@ jobs:
         run: |
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
-          https://YOUR_PROJECT_ID.functions.supabase.co/process-storage-events
+          https://iwcthscngbbygaanejib.supabase.co/functions/v1/process-storage-events
