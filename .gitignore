@@ -1,0 +1,19 @@
+# frontend dependencies and build output
+/machina-frontend/node_modules
+/machina-frontend/.pnp
+/machina-frontend/.yarn
+/machina-frontend/.next
+/machina-frontend/out
+/machina-frontend/build
+/machina-frontend/coverage
+/machina-frontend/.vercel
+
+# frontend env and logs
+/machina-frontend/.env*
+/machina-frontend/npm-debug.log*
+/machina-frontend/yarn-debug.log*
+/machina-frontend/yarn-error.log*
+/machina-frontend/.pnpm-debug.log*
+
+# misc
+/machina-frontend/.DS_Store
