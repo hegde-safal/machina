@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Navbar from "@/components/Navbar";
 import { ChevronRight, Zap, Building2, MessageSquare, ArrowRight } from 'lucide-react';
 
 export default function FileFluxLanding() {
@@ -15,21 +16,7 @@ export default function FileFluxLanding() {
       </div>
 
       <div className="relative z-10">
-        {/* NAVBAR */}
-        <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">FileFlux</span>
-            </div>
-            <div className="flex items-center gap-8">
-              <a href="#about" className="text-gray-600 hover:text-gray-900 transition font-medium text-sm">About</a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900 transition font-medium text-sm">Contact Us</a>
-              <button className="px-6 py-2 text-blue-600 font-semibold hover:text-blue-700 transition text-sm border border-blue-200 rounded-lg hover:bg-blue-50">
-                Sign In
-              </button>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
 
         {/* HERO SECTION */}
         <section className="max-w-7xl mx-auto px-6 py-24 text-center">
