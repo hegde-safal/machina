@@ -39,9 +39,9 @@ export default function LoginPage() {
     const isAdmin = department === "Admin";
     const dashboardPath = isAdmin
       ? "/admin/dashboard"
-      : `/employee/dashboard/${department.replace(/\s+/g, "-").toLowerCase()}`;
+      : "/employee/dashboard";
 
-    // Persist basic auth state for navbar and other pages
+    // Save login session
     if (typeof window !== "undefined") {
       window.localStorage.setItem(
         "authUser",
@@ -49,7 +49,6 @@ export default function LoginPage() {
           username,
           department,
           role: isAdmin ? "Admin" : "Employee",
-          dashboardPath,
         })
       );
     }
@@ -64,9 +63,18 @@ export default function LoginPage() {
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Ambient gradient blobs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply blur-3xl opacity-20 animate-pulse" style={{ animationDuration: "8s" }}></div>
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-100 rounded-full mix-blend-multiply blur-3xl opacity-15 animate-pulse" style={{ animationDuration: "10s", animationDelay: "2s" }}></div>
-        <div className="absolute bottom-0 left-1/2 w-80 h-80 bg-blue-50 rounded-full mix-blend-multiply blur-3xl opacity-20 animate-pulse" style={{ animationDuration: "9s", animationDelay: "4s" }}></div>
+        <div
+          className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply blur-3xl opacity-20 animate-pulse"
+          style={{ animationDuration: "8s" }}
+        />
+        <div
+          className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-100 rounded-full mix-blend-multiply blur-3xl opacity-15 animate-pulse"
+          style={{ animationDuration: "10s", animationDelay: "2s" }}
+        />
+        <div
+          className="absolute bottom-0 left-1/2 w-80 h-80 bg-blue-50 rounded-full mix-blend-multiply blur-3xl opacity-20 animate-pulse"
+          style={{ animationDuration: "9s", animationDelay: "4s" }}
+        />
       </div>
 
       <div className="relative z-10">
