@@ -1,3 +1,4 @@
+websockets
 supabase==2.25.0
 pdfplumber==0.11.2
 pytesseract==0.3.12
@@ -5,3 +6,7 @@ pdf2image==1.17.1
 docx2txt==0.8
 Pillow==10.1.0
 python-dotenv==1.0.0
+numpy
+google-genai
+python-dotenv
+faiss-cpu
