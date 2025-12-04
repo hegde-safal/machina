@@ -36,7 +36,7 @@ print("=" * 60)
 print("\n📄 Processing Document...\n")
 
 # Run the full pipeline
-query_text = "Who is the person authorized to take this purchase order?"
+query_text = "What is the total amount enlisted in this order?"
 result = run_full_pipeline(sample_document, rag_query_text=query_text)
 
 # Display results
@@ -58,7 +58,7 @@ print("\n🔑 EXTRACTED INFORMATION:")
 print(json.dumps(result['extracted_data'], indent=3))
 
 print("\n🔍 RAG SAMPLE QUERY:")
-print("   Q:Who is the person authorized to take this purchase order?")
+print(f"   Q:{query_text}")
 print(f"   A: {result['rag_sample_answer']}")
 
 print("\n" + "=" * 60)
