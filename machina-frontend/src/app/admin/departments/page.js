@@ -45,10 +45,23 @@ export default function DepartmentsOverviewPage() {
       }
 
       try {
-        const res = await fetch(`${API_BASE}/admin/departments/overview`);
-        if (!res.ok) throw new Error("Failed to fetch departments");
-        const data = await res.json();
-        setDepartments(data.departments || []);
+        // Fetch all documents to aggregate stats
+        const res = await fetch(`${API_BASE}/documents`);
+        if (!res.ok) throw new Error("Failed to fetch documents");
+        const docs = await res.json();
+
+        // Aggregate by department
+        const deptMap = {};
+        docs.forEach(doc => {
+          const dept = doc.destination || "Unassigned";
+          if (!deptMap[dept]) {
+            deptMap[dept] = { name: dept, slug: dept.toLowerCase(), pending: 0, in_progress: 0, completed: 0, last_activity: "Just now" };
+          }
+          // Mock status for now as backend doesn't track status yet
+          deptMap[dept].completed += 1;
+        });
+
+        setDepartments(Object.values(deptMap));
       } catch (err) {
         console.error(err);
         toast.error("Failed to load departments");

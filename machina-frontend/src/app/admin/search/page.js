@@ -47,8 +47,16 @@ export default function SearchPage() {
     try {
       const res = await fetch(`${API_BASE}/admin/search?query=${encodeURIComponent(query)}`);
       if (!res.ok) throw new Error();
+
       const data = await res.json();
-      setResults(data.results || []);
+      // Backend returns { "results": [ { "text": "...", "metadata": { "filename": "..." }, "distance": ... } ] }
+
+      const formattedResults = (data.results || []).map((item, idx) => ({
+        doc_id: idx, // We don't have a real ID yet, using index or filename
+        filename: item.metadata?.filename || "Unknown Document",
+        preview: item.text?.substring(0, 200) + "..."
+      }));
+      setResults(formattedResults);
     } catch (err) {
       toast.error("Search failed — backend unreachable");
     } finally {

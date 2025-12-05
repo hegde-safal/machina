@@ -73,7 +73,17 @@ export default function UploadPage() {
       }
 
       const data = await res.json();
-      setProcessed(data);
+      // Backend returns { "pipeline_result": { ... }, ... } or just the result directly?
+      // Looking at service.py: return pipeline_result
+      // So data IS the pipeline_result.
+      // pipeline_result has: summary, category, destination, extracted_data, rag_sample_answer
+
+      setProcessed({
+        filename: file.name,
+        summary: data.summary,
+        category: data.category,
+        routed_to: data.destination
+      });
       toast.success("Document processed & routed successfully!");
     } catch {
       toast.dismiss();
@@ -110,7 +120,7 @@ export default function UploadPage() {
 
           {/* Upload container */}
           <div className="rounded-3xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 p-12 space-y-8 shadow-md hover:shadow-lg transition">
-            
+
             {/* File Picker */}
             {!file ? (
               <div
@@ -278,9 +288,8 @@ function Info({ label, value, badge = false, cyan = false }) {
     <div>
       <p className="text-sm text-gray-600 mb-1">{label}</p>
       <span
-        className={`font-semibold px-3 py-1 rounded-lg ${
-          cyan ? "bg-cyan-100 text-cyan-700" : "bg-blue-100 text-blue-700"
-        }`}
+        className={`font-semibold px-3 py-1 rounded-lg ${cyan ? "bg-cyan-100 text-cyan-700" : "bg-blue-100 text-blue-700"
+          }`}
       >
         {value}
       </span>
